@@ -14,6 +14,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('cds.index') }}">Discography</a>
                 </li>      
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('cds.create') }}">New Cd</a>
+                </li>      
             </ul>
         </div>
     </nav>

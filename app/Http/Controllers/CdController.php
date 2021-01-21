@@ -30,6 +30,7 @@ class CdController extends Controller
     public function create()
     {
         //
+        return view('cds.create');
     }
 
     /**

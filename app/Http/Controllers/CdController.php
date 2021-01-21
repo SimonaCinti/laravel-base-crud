@@ -51,6 +51,18 @@ class CdController extends Controller
             'title' => 'required|unique:cds|max:30',
             'description' => 'required'
         ]);
+
+        // Salva i dati su DB
+
+        $cd = new Cd();
+        $cd->title = $data['title'];
+        $cd->description = $data['description'];
+        
+        $saved = $cd->save();
+        //dd($saved);
+        if( $saved ){
+            return redirect()->route('cds.show', $cd->id);
+        }
     }
 
     /**

@@ -41,7 +41,16 @@ class CdController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request->all());
+
+        $data = $request->all();
+        
+        // Validazione
+
+        $request->validate([
+            'title' => 'required|unique:cds|max:30',
+            'description' => 'required'
+        ]);
     }
 
     /**

@@ -51,9 +51,10 @@ class CdController extends Controller
      */
     public function show($id)
     {
+
         // Show cd
         $cd = Cd::find($id);
-        // dd($cd);
+
         return view('cds.show', compact('cd'));
     }
 

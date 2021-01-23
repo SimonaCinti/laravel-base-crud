@@ -142,6 +142,14 @@ class CdController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $cd = Cd::find($id);
+        // Associo ref del dato che sto per cancellare
+        $ref = $cd->title;
+        // Delete
+        $deleted = $cd->delete();
+        //Return
+        if ($deleted){
+            return redirect()->route('cds.index')->with('deleted', $ref);
+        }
     }
 }

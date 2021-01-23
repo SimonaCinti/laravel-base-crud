@@ -48,5 +48,9 @@
             </tbody>
         </table>
         
+        {{-- Paginazione --}}
+        <div class="pagination">
+            {{ $cds->links() }}
+        </div>
     </div>
 @endsection

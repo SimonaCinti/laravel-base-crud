@@ -15,9 +15,12 @@ class CdController extends Controller
      */
     public function index()
     {
-        //get data from db Cd
-        $cds = Cd::all();
-        // dd($cds);
+        //get data from db Cd in one page
+        // $cds = Cd::all();
+
+        // Paginate
+
+        $cds = Cd::paginate(4); // 4 entty for page
 
         // Return
         return view('cds.index', compact('cds'));

@@ -25,7 +25,7 @@
                             </a>
                         </td>
                         <td class="text-center" width="100">
-                            <a href="" class="btn btn-primary">
+                            <a href="{{ route('cds.edit', $cd->id)}}" class="btn btn-primary">
                                 Edit
                             </a>
                         </td>
